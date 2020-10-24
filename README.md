@@ -1,11 +1,10 @@
 Install untuk termux user
 pkg update && pkg upgrade
 pkg install git
-pkg install nodejs
 pkg install python2
-pip2 install mechanize
 git clone https://github.com/muiSzz/mulung
 cd mulung
+pip2 install mechanize
 python2 mulung.py
 
 kalo nemu eror kabarin ane coek
