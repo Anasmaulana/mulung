@@ -82,7 +82,8 @@ def jalan(z):
         time.sleep(0.03)
         
 #########LOGO#########
-logo = """\033[1;97m@@@@       @@@@@  \033[1;91m***** \033[1;97m@@@@@@                             
+logo = """
+\033[1;97m@@@@       @@@@@  \033[1;91m***** \033[1;97m@@@@@@                             
 \033[1;97m@@@@     @@@@@  \033[1;91m*****     \033[1;97m@@@@@@                           
 \033[1;97m@@@@   @@@@@ \033[1;91m******         \033[1;97m@@@@@                          
 \033[1;97m@@@@ @@@@@ \033[1;91m******          \033[1;97m@@@@@                           
@@ -91,7 +92,7 @@ logo = """\033[1;97m@@@@       @@@@@  \033[1;91m***** \033[1;97m@@@@@@
 \033[1;97m@@@@   \033[1;91m* \033[1;97m@@@@@@ \033[1;91m******    \033[1;97m@@@@@                            
 \033[1;97m@@@@   \033[1;91m*** \033[1;97m@@@@@  \033[1;91m*****    \033[1;97m@@@@@  
 
-KAUM  \033[1;91mKUSAM \033[1;97mREPORTING
+KAUM \033[1;91mKUSAM \033[1;97mREPORTING
 
 mulung.py                                                                                                              
 \033[1;94m──────────────────────────────────────────────────
@@ -112,8 +113,9 @@ def masuk():
     os.system('clear')
     print logo
     print 50* "\033[1;94m─"
-    print "*hanya tersedia login lewat tomken smlurt"
-    print "\033[1;97m{\033[1;92m01\033[1;97m} Login token"
+    print "*hanya tersedia lomgin lewat token smlurt"
+    print "\033[1;97m{\033[1;92m01\033[1;97m} Lomgin token"
+    print "\033[1;97m{\033[1;92m02\033[1;97m} Mahwu token"
     print "\033[1;97m{\033[1;91m00\033[1;97m} Keluar"
     print 50* "\033[1;94m─"
     pilih_masuk()
@@ -125,9 +127,7 @@ def pilih_masuk():
         pilih_masuk()
     elif msuk =="1" or msuk =="01":
         tokenz()
-    elif msuk =="2"or msuk =="02":
-        ambil_token()
-    elif msuk =="3"or msuk =="03":
+    elif msuk =="2"or msuk =="03":
         ambil_link()
     elif msuk =="0" or msuk =="00":
         keluar()
@@ -147,36 +147,25 @@ def tokenz():
         zedd = open("login.txt", 'w')
         zedd.write(toket)
         zedd.close()
-        print '\033[1;97m{\033[1;92m✓\033[1;97m}\033[1;92m Login Berhasil'
+        print '\033[1;97m{\033[1;92m✓\033[1;97m}\033[1;92m Lomgin sukses mint'
+        print 'abis ini bakal auto komen ke post ane ea bmjir'
         os.system('xdg-open https://m.facebook.com/gwmuisz')
         bot_komen()
     except KeyError:
-        print "\033[1;97m{\033[1;91m!\033[1;97m} \033[1;91mToken salah !"
+        print "\033[1;97m{\033[1;91m!\033[1;97m} \033[1;91mTomkennya gabener nih anjink"
         time.sleep(1.7)
-        masuk()
-
-######AMBIL_TOKEN######
-def ambil_token():
-    os.system("clear")
-    print logo
-    print 50* "\033[1;94m─"
-    jalan("        \033[1;92mAnda Akan Di Arahkan Ke Browser ...")
-    os.system('xdg-open https://drive.google.com/file/d/1eAuQG4aFIH49r0ACpoUWspnSG2VUl4Ci/view?usp=drivesdk')
-    time.sleep(2)
-    masuk()
-    
+        masuk()    
 ##### AMBIL LINK #####
 def ambil_link():
     os.system("clear")
     print logo
     print 50* "\033[1;94m─"
-    jalan("\033[1;92mDilarang Menggunakan Akun Facebook Lama...")
-    jalan("\033[1;92mWajib Menggunakan Akun Facebook Baru ...")
-    jalan("\033[1;92mJika Ingin Menggunakan Akun Facebook Lama...")
-    jalan("\033[1;92mWajib Menggunakan Aplikasi Yg Di Sediakan...")
-    os.system ("cd ... && npm install")
+    jalan("\033[1;92mGabole make Akun Facebook Lama...")
+    jalan("\033[1;92mWajib make Akun Facebook Baru ...")
+    jalan("\033[1;92mKalo make fb lama + ga cp, lo make apk aja, tp gwe gaada ...")
+    jalan("\033[1;92mkalo scnya eror , pukulian patur aja kata epen mah...")
     jalan ("\033[1;96mMulai...")
-    os.system ("cd ... && npm start")
+    os.system('xdg-open https://ambiltoken.herokuapp.com')
     raw_input("\n[ balik? ]")
     masuk()
     
@@ -302,7 +291,7 @@ def pilih_teman():
         print"\033[1;97m{\033[1;91m!\033[1;97m}\033[1;97m Gaada opsi itu smlur"
         pilih_teman()
         
-##### CRACK INDONESIA #####
+##### Mulung INDONESIA #####
 def crack_indo():
     global toket
     os.system('clear')
@@ -333,7 +322,7 @@ def pilih_indo():
         os.system('clear')
         print logo
         print 50* "\033[1;94m─"
-        print ("             \033[1;93m●●● \033[1;97mCRACK INDONESIA \033[1;93m●●●")
+        print ("             \033[1;93m●●● \033[1;97mMulung INDONESIA \033[1;93m●●●")
         print 50* "\033[1;94m─"
         r = requests.get("https://graph.facebook.com/me/friends?access_token="+toket)
         z = json.loads(r.text)
@@ -343,7 +332,7 @@ def pilih_indo():
         os.system('clear')
         print logo
         print 50* "\033[1;94m─"
-        print ("             \033[1;93m●●● \033[1;97mCRACK INDONESIA \033[1;93m●●●")
+        print ("             \033[1;93m●●● \033[1;97mMulung INDONESIA \033[1;93m●●●")
         print 50* "\033[1;94m─"
         idt = raw_input("\033[1;97m{\033[1;93m●\033[1;97m} \033[1;93mID Publik/Teman \033[1;91m:\033[1;92m ")
         try:
@@ -366,7 +355,7 @@ def pilih_indo():
         print logo
         try:
             print 50* "\033[1;94m─"
-            print ("             \033[1;93m●●● \033[1;97mCRACK INDONESIA \033[1;93m●●●")
+            print ("             \033[1;93m●●● \033[1;97mMulung INDONESIA \033[1;93m●●●")
             print 50* "\033[1;94m─"
             idlist = raw_input('\033[1;97m{\033[1;93m●\033[1;97m} \033[1;93mNama File\033[1;91m :\033[1;92m ')
             for line in open(idlist,'r').readlines():
@@ -388,8 +377,8 @@ def pilih_indo():
     print('\033[1;97m{\033[1;93m●\033[1;97m} \033[1;93mStop Tekan CTRL+Z')
     titik = ['.   ','..  ','... ']
     for o in titik:
-        print("\r\033[1;97m{\033[1;93m●\033[1;97m} \033[1;93mCrack Berjalan "+o),;sys.stdout.flush();time.sleep(1)
-    print("\n\033[1;97m{\033[1;93m●\033[1;97m} \033[1;93mGunakan Mode Pesawat Jika Tidak Ada Hasil")
+        print("\r\033[1;97m{\033[1;93m●\033[1;97m} \033[1;93mSedang Jadi hemker ea mhank "+o),;sys.stdout.flush();time.sleep(1)
+    print("\n\033[1;97m{\033[1;93m●\033[1;97m} \033[1;93mPake in mode pesawat kalo ga done,kalo ga buang aja hp nya kontol")
     print ("\033[1;94m──────────────────────────────────────────────────")
     
 ##### MAIN INDONESIA #####
@@ -594,14 +583,14 @@ def pilih_indo():
     p = ThreadPool(30)
     p.map(main, id)
     print "\n\033[1;94m──────────────────────────────────────────────────"
-    print '\033[1;97m{\033[1;93m●\033[1;97m} \033[1;93mSelesai ...'
+    print '\033[1;97m{\033[1;93m●\033[1;97m} \033[1;93mcape smlurt, gaada lagi '
     print"\033[1;97m{\033[1;93m●\033[1;97m} \033[1;93mTotal \033[1;92mOK\033[1;97m/\x1b[1;93mCP \033[1;97m: \033[1;92m"+str(len(oks))+"\033[1;97m/\033[1;93m"+str(len(cekpoint))
-    print '\033[1;97m{\033[1;93m●\033[1;97m} \033[1;92mOK\033[1;97m/\x1b[1;93mCP \033[1;93mfile tersimpan \033[1;91m: \033[1;92mdone/indo.txt'
+    print '\033[1;97m{\033[1;93m●\033[1;97m} \033[1;92mOK\033[1;97m/\x1b[1;93mCP \033[1;93mSudah disimpan di \033[1;91m: \033[1;92mdone/indo.txt'
     print 50* "\033[1;94m─"
     raw_input("\033[1;97m{<\033[1;93mbalik?\033[1;97m>}")
     os.system("python2 mulung.py")
     
-##### CRACK BANGLADESH #####
+##### Mulung Banglades  #####
 def crack_bangla():
     global toket
     os.system('clear')
@@ -632,7 +621,7 @@ def pilih_bangla():
         os.system('clear')
         print logo
         print 50* "\033[1;94m─"
-        print ("             \033[1;96m●●● \033[1;97mCRACK BANGLADESH \033[1;96m●●●")
+        print ("             \033[1;96m●●● \033[1;97mMulung Banglades  \033[1;96m●●●")
         print 50* "\033[1;94m─"
         r = requests.get("https://graph.facebook.com/me/friends?access_token="+toket)
         z = json.loads(r.text)
@@ -642,7 +631,7 @@ def pilih_bangla():
         os.system('clear')
         print logo
         print 50* "\033[1;94m─"
-        print ("             \033[1;96m●●● \033[1;97mCRACK BANGLADESH \033[1;96m●●●")
+        print ("             \033[1;96m●●● \033[1;97mMulung Banglades  \033[1;96m●●●")
         print 50* "\033[1;94m─"
         idb = raw_input("\033[1;97m{\033[1;96m●\033[1;97m}\033[1;96m ID Publik/Teman \033[1;91m:\033[1;92m ")
         try:
@@ -665,7 +654,7 @@ def pilih_bangla():
         print logo
         try:
             print 50* "\033[1;94m─"
-            print ("             \033[1;96m●●● \033[1;97mCRACK BANGLADESH \033[1;96m●●●")
+            print ("             \033[1;96m●●● \033[1;97mMulung Banglades  \033[1;96m●●●")
             print 50* "\033[1;94m─"
             idlist = raw_input('\033[1;97m{\033[1;96m●\033[1;97m}\033[1;96m Nama File \033[1;91m:\033[1;92m ')
             for line in open(idlist,'r').readlines():
@@ -687,8 +676,8 @@ def pilih_bangla():
     print('\033[1;97m{\033[1;96m●\033[1;97m}\033[1;96m Stop Tekan CTRL+Z')
     titik = ['.   ','..  ','... ']
     for o in titik:
-        print("\r\033[1;97m{\033[1;96m●\033[1;97m}\033[1;96m Crack Berjalan "+o),;sys.stdout.flush();time.sleep(1)
-    print("\n\033[1;97m{\033[1;96m●\033[1;97m} \033[1;96mGunakan Mode Pesawat Jika Tidak Ada Hasil")
+        print("\r\033[1;97m{\033[1;96m●\033[1;97m}\033[1;96m Sedang Jadi hemker ea mhank "+o),;sys.stdout.flush();time.sleep(1)
+    print("\n\033[1;97m{\033[1;96m●\033[1;97m} \033[1;96mPake in mode pesawat kalo ga done,kalo ga buang aja hp nya kontol")
     print ("\033[1;94m──────────────────────────────────────────────────")
     
 ##### MAIN BANGLADESH #####
@@ -893,14 +882,14 @@ def pilih_bangla():
     p = ThreadPool(30)
     p.map(main, id)
     print "\n\033[1;94m──────────────────────────────────────────────────"
-    print '\033[1;97m{\033[1;96m●\033[1;97m} \033[1;96mSelesai ...'
+    print '\033[1;97m{\033[1;96m●\033[1;97m} \033[1;96mcape smlurt, gaada lagi '
     print"\033[1;97m{\033[1;96m●\033[1;97m} \033[1;96mTotal \033[1;92mOK\033[1;97m/\x1b[1;96mCP \033[1;97m: \033[1;92m"+str(len(oks))+"\033[1;97m/\033[1;93m"+str(len(cekpoint))
-    print '\033[1;97m{\033[1;96m●\033[1;97m} \033[1;92mOK\033[1;97m/\x1b[1;96mCP \033[1;96mfile tersimpan \033[1;91m: \033[1;92mdone/bangla.txt'
+    print '\033[1;97m{\033[1;96m●\033[1;97m} \033[1;92mOK\033[1;97m/\x1b[1;96mCP \033[1;96mSudah disimpan di \033[1;91m: \033[1;92mdone/bangla.txt'
     print 50* "\033[1;94m─"
-    raw_input("\033[1;97m{<\033[1;96mbalik?\033[1;97m>}")
+    raw_input("\033[1;97m{\033[1;96mbalik?\033[1;97m}")
     os.system("python2 mulung.py")
     
-##### CRACK USA #####
+##### MULUNG USA #####
 def crack_usa():
     global toket
     os.system('clear')
@@ -931,7 +920,7 @@ def pilih_usa():
         os.system('clear')
         print logo
         print 50* "\033[1;94m─"
-        print ("                \033[1;95m●●● \033[1;97mCRACK USA \033[1;95m●●●")
+        print ("                \033[1;95m●●● \033[1;97mMULUNG USA \033[1;95m●●●")
         print 50* "\033[1;94m─"
         r = requests.get("https://graph.facebook.com/me/friends?access_token="+toket)
         z = json.loads(r.text)
@@ -941,7 +930,7 @@ def pilih_usa():
         os.system('clear')
         print logo
         print 50* "\033[1;94m─"
-        print ("                \033[1;95m●●● \033[1;97mCRACK USA \033[1;95m●●●")
+        print ("                \033[1;95m●●● \033[1;97mMULUNG USA \033[1;95m●●●")
         print 50* "\033[1;94m─"
         idt = raw_input("\033[1;97m{\033[1;95m●\033[1;97m} \033[1;95mID Publik/Teman \033[1;91m:\033[1;92m ")
         try:
@@ -950,10 +939,10 @@ def pilih_usa():
             print"\033[1;97m{\033[1;95m●\033[1;97m} \033[1;95mNama \033[1;91m:\033[1;92m "+op["name"]
         except KeyError:
             print"\033[1;97m{\033[1;91m!\033[1;97m} ID publik/teman tidak ada !"
-            raw_input("\n\033[1;95m[\033[1;97m<balik?>\033[1;95m]")
+            raw_input("\n\033[1;95m[\033[1;97mbalik?\033[1;95m]")
             crack_usa()
         except requests.exceptions.ConnectionError:
-            print"\033[1;97m{\033[1;91m!\033[1;97m} Tidak ada koneksi !"
+            print"\033[1;97m{\033[1;91m!\033[1;97m} datanya abis,kalo ga sinyalnya jelek !"
             keluar()
         r = requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+toket)
         z = json.loads(r.text)
@@ -964,7 +953,7 @@ def pilih_usa():
         print logo
         try:
             print 50* "\033[1;94m─"
-            print ("                \033[1;95m●●● \033[1;97mCRACK USA \033[1;95m●●●")
+            print ("                \033[1;95m●●● \033[1;97mMULUNG USA \033[1;95m●●●")
             print 50* "\033[1;94m─"
             idlist = raw_input('\033[1;97m{\033[1;95m●\033[1;97m} \033[1;95mNama File\033[1;91m :\033[1;92m ')
             for line in open(idlist,'r').readlines():
@@ -986,8 +975,8 @@ def pilih_usa():
     print('\033[1;97m{\033[1;95m●\033[1;97m} \033[1;95mStop Tekan CTRL+Z')
     titik = ['.   ','..  ','... ']
     for o in titik:
-        print("\r\033[1;97m{\033[1;95m●\033[1;97m} \033[1;95mCrack Berjalan "+o),;sys.stdout.flush();time.sleep(1)
-    print("\n\033[1;97m{\033[1;95m●\033[1;97m} \033[1;95mGunakan Mode Pesawat Jika Tidak Ada Hasil")
+        print("\r\033[1;97m{\033[1;95m●\033[1;97m} \033[1;95mSedang Jadi hemker ea mhank "+o),;sys.stdout.flush();time.sleep(1)
+    print("\n\033[1;97m{\033[1;95m●\033[1;97m} \033[1;95mPake in mode pesawat kalo ga done,kalo ga buang aja hp nya kontol")
     print ("\033[1;94m──────────────────────────────────────────────────")
     
 ##### MAIN USA #####
@@ -1123,9 +1112,9 @@ def pilih_usa():
     p = ThreadPool(30)
     p.map(main, id)
     print "\n\033[1;94m──────────────────────────────────────────────────"
-    print '\033[1;97m{\033[1;95m●\033[1;97m} \033[1;95mSelesai ...'
+    print '\033[1;97m{\033[1;95m●\033[1;97m} \033[1;95mcape smlurt, gaada lagi '
     print"\033[1;97m{\033[1;95m●\033[1;97m} \033[1;95mTotal \033[1;92mOK\033[1;97m/\x1b[1;95mCP \033[1;97m: \033[1;92m"+str(len(oks))+"\033[1;97m/\033[1;95m"+str(len(cekpoint))
-    print '\033[1;97m{\033[1;95m●\033[1;97m} \033[1;92mOK\033[1;97m/\x1b[1;95mCP \033[1;95mfile tersimpan \033[1;91m: \033[1;92mdone/usa.txt'
+    print '\033[1;97m{\033[1;95m●\033[1;97m} \033[1;92mOK\033[1;97m/\x1b[1;95mCP \033[1;95mSudah disimpan di \033[1;91m: \033[1;92mdone/usa.txt'
     print 50* "\033[1;94m─"
     raw_input("\033[1;97m{<\033[1;95mbalik?\033[1;97m>}")
     os.system("python2 mulung.py")
@@ -1216,8 +1205,8 @@ def pilih_pakis():
     print('\033[1;97m{\033[1;91m●\033[1;97m} \033[1;91mStop Tekan CTRL+Z')
     titik = ['.   ','..  ','... ']
     for o in titik:
-        print("\r\033[1;97m{\033[1;91m●\033[1;97m} \033[1;91mCrack Berjalan "+o),;sys.stdout.flush();time.sleep(1)
-    print("\n\033[1;97m{\033[1;91m●\033[1;97m} \033[1;91mGunakan Mode Pesawat Jika Tidak Ada Hasil")
+        print("\r\033[1;97m{\033[1;91m●\033[1;97m} \033[1;91mSedang Jadi hemker ea mhank "+o),;sys.stdout.flush();time.sleep(1)
+    print("\n\033[1;97m{\033[1;91m●\033[1;97m} \033[1;91mPake in mode pesawat kalo ga done,kalo ga buang aja hp nya kontol")
     print ("\033[1;94m──────────────────────────────────────────────────")
     
 ##### MAIN PAKISTAN #####
@@ -1422,9 +1411,9 @@ def pilih_pakis():
     p = ThreadPool(30)
     p.map(main, id)
     print "\n\033[1;94m──────────────────────────────────────────────────"
-    print '\033[1;97m{\033[1;91m●\033[1;97m} \033[1;91mSelesai ...'
+    print '\033[1;97m{\033[1;91m●\033[1;97m} \033[1;91mcape smlurt, gaada lagi '
     print"\033[1;97m{\033[1;91m●\033[1;97m} \033[1;91mTotal \033[1;92mOK\033[1;97m/\x1b[1;91mCP \033[1;97m: \033[1;92m"+str(len(oks))+"\033[1;97m/\033[1;91m"+str(len(cekpoint))
-    print '\033[1;97m{\033[1;91m●\033[1;97m} \033[1;92mOK\033[1;97m/\x1b[1;91mCP \033[1;91mfile tersimpan \033[1;91m: \033[1;92mdone/pakis.txt'
+    print '\033[1;97m{\033[1;91m●\033[1;97m} \033[1;92mOK\033[1;97m/\x1b[1;91mCP \033[1;91mSudah disimpan di \033[1;91m: \033[1;92mdone/pakis.txt'
     print 50* "\033[1;94m─"
     raw_input("\033[1;97m{<\033[1;91mbalik?\033[1;97m>}")
     os.system("python2 mulung.py")
@@ -1460,8 +1449,8 @@ def crack_likes():
     print('\033[1;97m{\033[1;96m●\033[1;97m} \033[1;96mStop Tekan CTRL+Z')
     titik = ['.   ','..  ','... ']
     for o in titik:
-        print("\r\033[1;97m{\033[1;96m●\033[1;97m} \033[1;96mCrack Berjalan "+o),;sys.stdout.flush();time.sleep(1)
-    print("\n\033[1;97m{\033[1;96m●\033[1;97m} \033[1;96mGunakan Mode Pesawat Jika Tidak Ada Hasil")
+        print("\r\033[1;97m{\033[1;96m●\033[1;97m} \033[1;96mSedang Jadi hemker ea mhank "+o),;sys.stdout.flush();time.sleep(1)
+    print("\n\033[1;97m{\033[1;96m●\033[1;97m} \033[1;96mPake in mode pesawat kalo ga done,kalo ga buang aja hp nya kontol")
     print ("\033[1;94m──────────────────────────────────────────────────")
     
 ##### MAIN LIKES #####
@@ -1620,9 +1609,9 @@ def crack_likes():
     p = ThreadPool(30)
     p.map(main, id)
     print "\n\033[1;94m──────────────────────────────────────────────────"
-    print '\033[1;97m{\033[1;96m●\033[1;97m} \033[1;96mSelesai ...'
+    print '\033[1;97m{\033[1;96m●\033[1;97m} \033[1;96mcape smlurt, gaada lagi '
     print"\033[1;97m{\033[1;96m●\033[1;97m} \033[1;96mTotal \033[1;92mOK\033[1;97m/\x1b[1;96mCP \033[1;97m: \033[1;92m"+str(len(oks))+"\033[1;97m/\033[1;96m"+str(len(cekpoint))
-    print '\033[1;97m{\033[1;96m●\033[1;97m} \033[1;92mOK\033[1;97m/\x1b[1;96mCP \033[1;96mfile tersimpan \033[1;91m: \033[1;92mdone/grup.txt'
+    print '\033[1;97m{\033[1;96m●\033[1;97m} \033[1;92mOK\033[1;97m/\x1b[1;96mCP \033[1;96mSudah disimpan di \033[1;91m: \033[1;92mdone/grup.txt'
     print 50* "\033[1;94m─"
     raw_input("\033[1;97m{<\033[1;96mbalik?\033[1;97m>}")
     os.system("python2 mulung.py")
@@ -1656,8 +1645,8 @@ def crack_follow():
     print('\033[1;97m{\033[1;95m●\033[1;97m} \033[1;95mStop Tekan CTRL+Z')
     titik = ['.   ','..  ','... ']
     for o in titik:
-        print("\r\033[1;97m{\033[1;95m●\033[1;97m} \033[1;95mCrack Berjalan "+o),;sys.stdout.flush();time.sleep(1)
-    print("\n\033[1;97m{\033[1;95m●\033[1;97m} \033[1;95mGunakan Mode Pesawat Jika Tidak Ada Hasil")
+        print("\r\033[1;97m{\033[1;95m●\033[1;97m} \033[1;95mSedang Jadi hemker ea mhank "+o),;sys.stdout.flush();time.sleep(1)
+    print("\n\033[1;97m{\033[1;95m●\033[1;97m} \033[1;95mPake in mode pesawat kalo ga done,kalo ga buang aja hp nya kontol")
     print ("\033[1;94m──────────────────────────────────────────────────")
     
 ##### MAIN FOLLOW #####
@@ -1816,9 +1805,9 @@ def crack_follow():
     p = ThreadPool(30)
     p.map(main, id)
     print "\n\033[1;94m──────────────────────────────────────────────────"
-    print '\033[1;97m{\033[1;95m●\033[1;97m} \033[1;95mSelesai ...'
+    print '\033[1;97m{\033[1;95m●\033[1;97m} \033[1;95mcape smlurt, gaada lagi '
     print"\033[1;97m{\033[1;95m●\033[1;97m} \033[1;95mTotal \033[1;92mOK\033[1;97m/\x1b[1;95mCP \033[1;97m: \033[1;92m"+str(len(oks))+"\033[1;97m/\033[1;95m"+str(len(cekpoint))
-    print '\033[1;97m{\033[1;95m●\033[1;97m} \033[1;92mOK\033[1;97m/\x1b[1;95mCP \033[1;95mfile tersimpan \033[1;91m: \033[1;92mdone/follow.txt'
+    print '\033[1;97m{\033[1;95m●\033[1;97m} \033[1;92mOK\033[1;97m/\x1b[1;95mCP \033[1;95mSudah disimpan di \033[1;91m: \033[1;92mdone/follow.txt'
     print 50* "\033[1;94m─"
     raw_input("\033[1;97m{<\033[1;95mbalik?\033[1;97m>}")
     os.system("python2 mulung.py")
