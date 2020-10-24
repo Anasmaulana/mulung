@@ -1812,7 +1812,7 @@ def crack_follow():
     raw_input("\033[1;97m{<\033[1;95mbalik?\033[1;97m>}")
     os.system("python2 mulung.py")
     
-##### USERNAME ID ####
+##### USERNAME ####
 def user_id():
     os.system('clear')
     print logo
