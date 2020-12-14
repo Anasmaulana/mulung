@@ -6,7 +6,7 @@ Install untuk termux user
 
 3.pkg install python2
 
-4.git clone https://github.com/muiSzz/mulung
+4.git clone https://github.com/gwmuisz/mulung.git
 
 5.cd mulung
 
